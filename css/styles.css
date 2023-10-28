@@ -120,6 +120,10 @@ ul {
     ),
     url(../images/hero-background-image.jpg);
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 1440px;
+
 }
 
 .hero-title {
@@ -147,6 +151,7 @@ ul {
   border: none;
   border-radius: 4px;
   margin: 0 auto;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
@@ -161,6 +166,8 @@ ul {
 .advantages-section-container-svg {
   display: flex;
   align-items: center;
+  justify-content: center;
+  height: 112px;
   padding: 24px 100px;
   background-color: #f4f4fd;
   border: 1px solid #8e8f99;
@@ -300,6 +307,7 @@ ul {
 
 .our-portfolio-section-list-item {
   width: calc((100% - 48px) / 3);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
 
 .our-portfolio-section-box {
@@ -307,7 +315,7 @@ ul {
   overflow: hidden;
 }
 
-.our-portfolio-section-overlay {
+.our-portfolio-section-overlay-text {
   position: absolute;
   top: 0;
   left: 0;
@@ -323,7 +331,7 @@ ul {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.our-portfolio-section-list-item:hover .our-portfolio-section-overlay {
+.our-portfolio-section-list-item:hover .our-portfolio-section-overlay-text {
   transform: translateY(0);
 }
 
