@@ -9,9 +9,15 @@ img {
   display: block;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
-} 
+}
 
 a {
   text-decoration: none;
@@ -107,6 +113,13 @@ ul {
   background-color: #2e2f42;
   color: #ffffff;
   padding: 188px 0;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero-background-image.jpg);
+  background-repeat: no-repeat;
 }
 
 .hero-title {
@@ -143,6 +156,16 @@ ul {
 
 .advantages-section {
   padding: 120px 0;
+}
+
+.advantages-section-container-svg {
+  display: flex;
+  align-items: center;
+  padding: 24px 100px;
+  background-color: #f4f4fd;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  margin-bottom: 8px;
 }
 
 .advantages-section-list-item-title {
@@ -206,6 +229,9 @@ ul {
 
 .our-team-section-list-item {
   background-color: #ffffff;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .our-team-section-list-item {
@@ -227,6 +253,22 @@ ul {
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: center;
+}
+
+.our-team-section-links-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.our-team-section-links-list-item {
+  width: 40px;
+  height: 40px;
+  background-color: #4d5ae5;
+  padding: 12px;
+  border-radius: 100%;
 }
 
 .our-team-section-container {
@@ -258,6 +300,37 @@ ul {
 
 .our-portfolio-section-list-item {
   width: calc((100% - 48px) / 3);
+}
+
+.our-portfolio-section-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.our-portfolio-section-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #F4F4FD;
+  background-color: #4D5AE5;
+  padding-top: 40px;
+  padding-right: 32px;
+  padding-left: 32px;
+  transform: translateY(100%);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.our-portfolio-section-list-item:hover .our-portfolio-section-overlay {
+  transform: translateY(0);
+}
+
+.our-portfolio-section-list-item:hover {
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .our-portfolio-section-list-item-container {
@@ -310,5 +383,20 @@ footer > .container {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
-  max-width: 264px
+  max-width: 264px;
+}
+
+.footer-links-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-links-list-item {
+  width: 40px;
+  height: 40px;
+  background-color: #4d5ae5;
+  padding: 8px;
+  border-radius: 100%;
 }
